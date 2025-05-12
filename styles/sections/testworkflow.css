@@ -1,0 +1,230 @@
+
+/* Workflow Test Section */
+.workflow-test {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-neutral-50);
+}
+
+.workflow-test-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.workflow-test-intro {
+    max-width: 400px;
+}
+
+.title-badge {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-neutral-800);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.workflow-description {
+    font-size: 1.25rem;
+    color: var(--color-neutral-600);
+    line-height: 1.6;
+}
+
+.workflow-test-form {
+    background-color: white;
+    padding: var(--spacing-2xl);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.test-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.form-group label {
+    color: var(--color-neutral-700);
+    font-weight: var(--font-weight-medium);
+    font-size: 1.125rem;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--color-neutral-400);
+    border-bottom: 2px solid var(--color-neutral-400);
+    transform: translateY(-50%) rotate(45deg);
+    pointer-events: none;
+}
+
+.test-form select,
+.test-form textarea,
+.test-form input[type="email"] {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid var(--color-neutral-200);
+    border-radius: 8px;
+    background-color: white;
+    color: var(--color-neutral-700);
+    font-size: 1rem;
+    transition: all var(--transition-base);
+}
+
+.test-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.test-form select:hover,
+.test-form textarea:hover,
+.test-form input[type="email"]:hover {
+    border-color: var(--color-primary-400);
+}
+
+.test-form select:focus,
+.test-form textarea:focus,
+.test-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px var(--color-primary-100);
+}
+
+.context-input-wrapper {
+    position: relative;
+}
+
+.attach-file-btn {
+    position: absolute;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    background: none;
+    border: none;
+    color: var(--color-neutral-400);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: 4px;
+    transition: all var(--transition-base);
+}
+
+.attach-file-btn:hover {
+    color: var(--color-primary-500);
+    background-color: var(--color-primary-50);
+}
+
+.hidden-file-input {
+    display: none;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: var(--color-primary-500);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: var(--font-weight-semibold);
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.submit-btn:hover {
+    background-color: var(--color-primary-600);
+}
+
+.submit-btn svg {
+    transition: transform var(--transition-base);
+}
+
+.submit-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .workflow-test {
+    background-color: var(--color-neutral-900);
+}
+
+[data-theme="dark"] .title-badge {
+    color: var(--color-neutral-50);
+}
+
+[data-theme="dark"] .workflow-description {
+    color: var(--color-neutral-400);
+}
+
+[data-theme="dark"] .workflow-test-form {
+    background-color: var(--color-neutral-800);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .form-group label {
+    color: var(--color-neutral-300);
+}
+
+[data-theme="dark"] .test-form select,
+[data-theme="dark"] .test-form textarea,
+[data-theme="dark"] .test-form input[type="email"] {
+    background-color: var(--color-neutral-900);
+    border-color: var(--color-neutral-700);
+    color: var(--color-neutral-200);
+}
+
+[data-theme="dark"] .test-form select:hover,
+[data-theme="dark"] .test-form textarea:hover,
+[data-theme="dark"] .test-form input[type="email"]:hover {
+    border-color: var(--color-primary-600);
+}
+
+[data-theme="dark"] .test-form select:focus,
+[data-theme="dark"] .test-form textarea:focus,
+[data-theme="dark"] .test-form input[type="email"]:focus {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px var(--color-primary-900);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .workflow-test-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .workflow-test-intro {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .workflow-test {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .workflow-test-form {
+        padding: var(--spacing-xl);
+    }
+
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

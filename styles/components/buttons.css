@@ -1,0 +1,31 @@
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 8px;
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    text-align: center;
+    transition: var(--transition-base);
+    letter-spacing: 0.01em;
+}
+
+.button-primary {
+    background-color: var(--color-primary-500);
+    color: white;
+    transition: background-color var(--transition-base);
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-600);
+}
+
+.process-cta {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+}
+
+.process-cta .button {
+    font-size: 1.125rem;
+    padding: var(--spacing-md) var(--spacing-xl);
+}

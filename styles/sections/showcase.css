@@ -1,12 +1,12 @@
 /* Showcase Section Styles */
 .use-cases-showcase {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-2xl) 0;
     background-color: var(--color-neutral-50);
 }
 
 .use-cases-showcase h2 {
     font-size: clamp(2rem, 3vw, 2.5rem);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     color: var(--color-neutral-800);
     text-align: center;
 }
@@ -14,7 +14,7 @@
 .section-subtitle {
     font-size: clamp(1.1rem, 2vw, 1.25rem);
     color: var(--color-neutral-600);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -24,7 +24,7 @@
 .showcase-grid {
     display: grid;
     grid-template-columns: 250px 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-md);
     margin-top: var(--spacing-2xl);
 }
 
@@ -33,7 +33,7 @@
     top: 100px;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
 }
 
 .showcase-tab {
@@ -46,7 +46,7 @@
     background: transparent;
     cursor: pointer;
     transition: all var(--transition-base);
-    width: 100%;
+    width: 98%;
     text-align: left;
     font-weight: var(--font-weight-medium);
 }
@@ -199,7 +199,7 @@
     font-size: 1.1rem;
     line-height: 1.6;
     color: var(--color-neutral-600);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 [data-theme="dark"] .showcase-tab-content h3 {
@@ -215,13 +215,13 @@
 .use-case-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
 }
 
 .use-case-card {
     background-color: var(--color-neutral-50);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     border-radius: 12px;
     transition: transform var(--transition-base);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -302,19 +302,3 @@
     color: var(--color-primary-300);
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .use-case-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-
-    .use-case-card {
-        padding: var(--spacing-lg);
-    }
-
-    .use-case-card h4 {
-        font-size: 1.125rem;
-        margin-bottom: var(--spacing-md);
-    }
-} 

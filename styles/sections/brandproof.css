@@ -1,0 +1,89 @@
+
+/* Brand Proof Section */
+.brand-proof {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-neutral-50);
+}
+
+.trusted-by {
+    text-align: center;
+    color: var(--color-neutral-600);
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-xl);
+}
+
+.logo-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+.logo-slide {
+    flex: 0 0 200px;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-slide img {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity var(--transition-base);
+    filter: grayscale(1);
+}
+
+.logo-slide:hover img {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .brand-proof {
+    background-color: var(--color-neutral-900);
+    border-color: var(--color-neutral-800);
+}
+
+[data-theme="dark"] .trusted-by {
+    color: var(--color-neutral-400);
+}
+
+[data-theme="dark"] .logo-slide img {
+    filter: grayscale(1) brightness(2);
+}
+
+[data-theme="dark"] .logo-slide:hover img {
+    filter: grayscale(0) brightness(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .brand-proof {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .logo-slide {
+        flex: 0 0 160px;
+        padding: 0 var(--spacing-md);
+    }
+
+    .logo-slide img {
+        max-width: 100px;
+    }
+}

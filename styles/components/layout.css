@@ -1,0 +1,94 @@
+/* Section Base Styles */
+.section {
+    padding: var(--spacing-3xl) 0;
+}
+
+.section--light {
+    background-color: white;
+}
+
+.section--dark {
+    background-color: var(--color-neutral-50);
+}
+
+/* Typography */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-tight);
+    color: var(--color-neutral-800);
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title--center {
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-subtitle--center {
+    text-align: center;
+}
+
+/* Grid Layouts */
+.grid {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.grid--2col {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid--3col {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Component Spacing */
+.component-spacing {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .section-title {
+    color: var(--color-neutral-50);
+}
+
+[data-theme="dark"] .section-subtitle {
+    color: var(--color-neutral-400);
+}
+
+[data-theme="dark"] .section--dark {
+    background-color: var(--color-neutral-900);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .grid--2col,
+    .grid--3col {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+} 

@@ -1,0 +1,121 @@
+/* Responsive Design
+   ========================================================================== */
+   @media (max-width: 1024px) {
+    :root {
+        --container-padding: var(--spacing-lg);
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-2xl);
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+
+    .image-comparison {
+        gap: var(--spacing-lg);
+    }
+
+    .showcase-tab {
+        flex: 0 0 auto;
+        width: auto;
+        padding: var(--spacing-md) var(--spacing-lg);
+        white-space: nowrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .tab-icon {
+        display: none;
+    }
+
+    .process-cta {
+        margin-top: var(--spacing-xl);
+    }
+
+    .showcase-grid {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xl);
+        align-items: stretch;
+    }
+
+    .showcase-sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: var(--spacing-sm);
+        width: 100%;
+    }
+
+    .showcase-content {
+        width: 100%;
+    }
+
+    .showcase-tab-content {
+        width: 100%;
+    }
+
+    .use-case-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        width: 100%;
+    }
+
+    .use-case-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .main-nav {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .theme-toggle {
+        margin: var(--spacing-md) 0;
+    }
+
+    .image-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-tab {
+        flex: 0 0 auto;
+        padding: var(--spacing-sm) var(--spacing-lg);
+        white-space: nowrap;
+        margin-right: var(--spacing-sm);
+        font-size: 0.9375rem;
+    }
+
+    .tab-icon {
+        display: none;
+    }
+
+    .showcase-tab:last-child {
+        margin-right: 0;
+    }
+} 
