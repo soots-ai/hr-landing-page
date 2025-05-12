@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soots helps HR professionals automate their workflows with a friendly, no-code platform.">
+    <title>Soots - Automate Repetition</title>
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/showcase.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <a href="/" class="logo">
+                    <img src="./assets/images/logo.svg" alt="Soots Logo" width="120" height="40">
+                    <span class="logo-text">Soots</span>
+                </a>
+
+                <div class="nav-wrapper">
+                    <ul class="nav-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+                    <div class="theme-toggle">
+                        <label class="switch" aria-label="Toggle dark mode">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round">
+                                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="5"/>
+                                    <line x1="12" y1="1" x2="12" y2="3"/>
+                                    <line x1="12" y1="21" x2="12" y2="23"/>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                    <line x1="1" y1="12" x2="3" y2="12"/>
+                                    <line x1="21" y1="12" x2="23" y2="12"/>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                                </svg>
+                                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>HR is about people, not paperwork</h1>
+                        <p class="subheadline">Soots automates the tedious work, so you can focus on what you're good at.</p>
+                        <a href="#get-started" class="button button-primary">Try Soots Today</a>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="image-comparison">
+                            <figure class="image-item">
+                                <p>More people-work</p>
+                                <img src="./assets/images/peoplework.png" 
+                                     alt="Illustration of HR professionals engaging with employees" 
+                                     width="400" 
+                                     height="300"
+                                     loading="eager">
+                            </figure>
+                            <figure class="image-item">
+                                <img src="./assets/images/paperwork.png" 
+                                     alt="Illustration of reduced paperwork" 
+                                     width="400" 
+                                     height="300"
+                                     loading="eager">
+                                <p>Less paperwork</p>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Automate repetition.</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "Soots transformed our onboarding process. What used to take hours now happens automatically, letting me focus on making new hires feel welcome instead of drowning in paperwork."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <h3>Sarah Chen</h3>
+                            <p>HR Director at TechFlow Solutions</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "I've made live easier for my stakeholders, while reducing a 14 hour weekly task to 30 seconds!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <h3>Michael Rodriguez</h3>
+                            <p>HR Manager at GrowthCo</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <blockquote>
+                            "We cut our HR administrative work by 70% using Soots. Now we can actually spend time on employee development and company culture initiatives."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <h3>Emily Thompson</h3>
+                            <p>Chief People Officer at InnovateCorp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="use-cases" id="use-cases">
+            <div class="container">
+                <div class="use-cases-header">
+                    <h2>Get started in minutes.</h2>
+                    <p class="section-subtitle">Build for HR, not IT</p>
+                    <div class="process-timeline">
+                        <button class="process-step active" data-category="recruit">
+                            <div class="step-icon">
+                                <span class="icon-circle">1</span>
+                                <div class="icon-line"></div>
+                            </div>
+                            <div class="step-content">
+                                <h3>Select</h3>
+                                <p class="step-description">Choose one of our template workflows</p>
+                            </div>
+                        </button>
+                        <button class="process-step" data-category="hire">
+                            <div class="step-icon">
+                                <span class="icon-circle">2</span>
+                                <div class="icon-line"></div>
+                            </div>
+                            <div class="step-content">
+                                <h3>Add</h3>
+                                <p class="step-description">Add some company specific context or specific instructions</p>
+                            </div>
+                        </button>
+                        <button class="process-step" data-category="onboard">
+                            <div class="step-icon">
+                                <span class="icon-circle">3</span>
+                            </div>
+                            <div class="step-content">
+                                <h3>Use</h3>
+                                <p class="step-description">Start using the flows right away</p>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="process-cta">
+                        <a href="#get-started" class="button button-primary">Start Automating Today</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="use-cases-showcase" id="use-cases-showcase">
+            <div class="container">
+                <h2>Real HR automation in action.</h2>
+                <p class="section-subtitle">Read how Soots transforms everyday HR tasks</p>
+                
+                <div class="showcase-grid">
+                    <div class="showcase-sidebar">
+                        <button class="showcase-tab active" data-tab="recruit">
+                            <span class="tab-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </span>
+                            <span>Recruit</span>
+                        </button>
+                        <button class="showcase-tab" data-tab="hire">
+                            <span class="tab-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                    <path d="M9 14l2 2 4-4"></path>
+                                </svg>
+                            </span>
+                            <span>Hire</span>
+                        </button>
+                        <button class="showcase-tab" data-tab="onboard">
+                            <span class="tab-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                                    <path d="M12 3v1"></path>
+                                    <path d="M12 20v1"></path>
+                                    <path d="M3 12h1"></path>
+                                    <path d="M20 12h1"></path>
+                                </svg>
+                            </span>
+                            <span>Onboard</span>
+                        </button>
+                    </div>
+                    
+                    <div class="showcase-content">
+                        <div class="showcase-tab-content active" data-tab="recruit">
+                            <h3>Streamline Your Recruitment Process</h3>
+                            <p>Automate candidate communications, schedule interviews, and manage your talent pipeline effortlessly.</p>
+                            <div class="use-case-grid">
+                                <div class="use-case-card">
+                                    <h4>Candidate Screening</h4>
+                                    <div class="metrics">
+                                        <div class="metric">
+                                            <span class="metric-label">Time per candidate</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">45 min</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">5 min</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Weekly hours saved</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">20 hrs</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">2.5 hrs</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="use-case-card">
+                                    <h4>Interview Scheduling</h4>
+                                    <div class="metrics">
+                                        <div class="metric">
+                                            <span class="metric-label">Scheduling time</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">25 min</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">2 min</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Response time</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">2 days</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">2 hrs</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-tab-content" data-tab="hire">
+                            <h3>Simplify Hiring Workflows</h3>
+                            <p>Generate offer letters, manage approvals, and track hiring progress all in one place.</p>
+                            <div class="use-case-grid">
+                                <div class="use-case-card">
+                                    <h4>Offer Letter Generation</h4>
+                                    <div class="metrics">
+                                        <div class="metric">
+                                            <span class="metric-label">Creation time</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">2 hrs</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">5 min</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Error rate</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">12%</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">0.1%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="use-case-card">
+                                    <h4>Approval Workflows</h4>
+                                    <div class="metrics">
+                                        <div class="metric">
+                                            <span class="metric-label">Approval time</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">3 days</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">4 hrs</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Follow-ups needed</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">5-6</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">0-1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-tab-content" data-tab="onboard">
+                            <h3>Seamless Employee Onboarding</h3>
+                            <p>Create personalized onboarding experiences and automate paperwork for new hires.</p>
+                            <div class="use-case-grid">
+                                <div class="use-case-card">
+                                    <h4>Document Processing</h4>
+                                    <div class="metrics">
+                                        <div class="metric">
+                                            <span class="metric-label">Processing time</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">4 hrs</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">15 min</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">Completion rate</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">65%</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">98%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="use-case-card">
+                                    <h4>System Setup</h4>
+                                    <div class="metrics">
+                                        <div class="metric">
+                                            <span class="metric-label">Setup time</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">2 days</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">1 hr</span>
+                                            </div>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-label">IT tickets</span>
+                                            <div class="metric-comparison">
+                                                <span class="before">8-10</span>
+                                                <span class="arrow">→</span>
+                                                <span class="after">0-1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="brand-proof">
+            <div class="container">
+                <p class="trusted-by">Trusted by innovators</p>
+                <div class="logo-carousel">
+                    <div class="logo-track">
+                        <!-- First set of logos -->
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand1.svg" alt="TechFlow" width="120" height="40">
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand2.svg" alt="GrowthCo" width="120" height="40">
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand3.svg" alt="InnovateCorp" width="120" height="40">
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand4.svg" alt="FutureWorks" width="120" height="40">
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand5.svg" alt="NextGen" width="120" height="40">
+                        </div>
+                        <!-- Duplicate set for infinite scroll -->
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand1.svg" alt="TechFlow" width="120" height="40">
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand2.svg" alt="GrowthCo" width="120" height="40">
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand3.svg" alt="InnovateCorp" width="120" height="40">
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand4.svg" alt="FutureWorks" width="120" height="40">
+                        </div>
+                        <div class="logo-slide">
+                            <img src="./assets/images/brands/brand5.svg" alt="NextGen" width="120" height="40">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="workflow-test">
+            <div class="container">
+                <div class="workflow-test-grid">
+                    <div class="workflow-test-intro">
+                        <h2 class="title-badge">See for yourself.</h2>
+                        <p class="workflow-description">
+                            Experience how Soots can transform your HR workflows. Select a template, 
+                            add your context, and hit send.
+                        </p>
+                    </div>
+                    <div class="workflow-test-form">
+                        <form id="workflowTestForm" class="test-form">
+                            <div class="form-group">
+                                <label for="workflowSelect">Select Workflow</label>
+                                <div class="select-wrapper">
+                                    <select id="workflowSelect" name="workflow" required>
+                                        <option value="" disabled selected>Choose a workflow template...</option>
+                                        <option value="onboarding">Employee Onboarding</option>
+                                        <option value="offboarding">Employee Offboarding</option>
+                                        <option value="recruitment">Recruitment Process</option>
+                                        <option value="performance">Performance Review</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contextInput">Add your context</label>
+                                <div class="context-input-wrapper">
+                                    <textarea id="contextInput" name="context" placeholder="What specific details should we include?" rows="4"></textarea>
+                                    <button type="button" class="attach-file-btn" aria-label="Attach file">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                                        </svg>
+                                    </button>
+                                    <input type="file" id="fileInput" name="attachment" class="hidden-file-input">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emailInput">Your email</label>
+                                <input type="email" id="emailInput" name="email" placeholder="Where should we send the demo?" required>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <span>Send</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2025 Soots. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', 
+                navLinks.classList.contains('active').toString()
+            );
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && 
+                !navLinks.contains(e.target) && 
+                navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            themeToggle.checked = true;
+            body.setAttribute('data-theme', 'dark');
+        }
+
+        // Process steps functionality
+        const processSteps = document.querySelectorAll('.process-step');
+        let currentStep = 0;
+
+        function activateStep(index) {
+            processSteps.forEach((step, i) => {
+                if (i <= index) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+        }
+
+        // Auto advance steps every 2 seconds
+        function autoAdvanceSteps() {
+            currentStep = (currentStep + 1) % processSteps.length;
+            activateStep(currentStep);
+        }
+
+        let autoAdvanceInterval = setInterval(autoAdvanceSteps, 2000);
+
+        // Handle manual step clicks
+        processSteps.forEach((step, index) => {
+            step.addEventListener('click', () => {
+                clearInterval(autoAdvanceInterval);
+                currentStep = index;
+                activateStep(currentStep);
+                autoAdvanceInterval = setInterval(autoAdvanceSteps, 2000);
+            });
+        });
+
+        // Showcase tabs functionality
+        const showcaseTabs = document.querySelectorAll('.showcase-tab');
+        const showcaseContents = document.querySelectorAll('.showcase-tab-content');
+
+        showcaseTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                
+                // Remove active class from all tabs and contents
+                showcaseTabs.forEach(t => t.classList.remove('active'));
+                showcaseContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.querySelector(`.showcase-tab-content[data-tab="${tabId}"]`).classList.add('active');
+            });
+        });
+
+        // Start the process steps animation
+        activateStep(currentStep);
+    </script>
+</body>
+</html> 

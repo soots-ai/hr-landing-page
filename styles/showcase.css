@@ -1,0 +1,320 @@
+/* Showcase Section Styles */
+.use-cases-showcase {
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--color-neutral-50);
+}
+
+.use-cases-showcase h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-neutral-800);
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.showcase-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.showcase-tab {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    width: 100%;
+    text-align: left;
+    font-weight: var(--font-weight-medium);
+}
+
+.showcase-tab:hover {
+    background: var(--color-neutral-100);
+}
+
+.showcase-tab.active {
+    background: var(--color-primary-100);
+    border-color: var(--color-primary-300);
+    color: var(--color-primary-700);
+}
+
+.tab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: var(--color-neutral-600);
+}
+
+.showcase-tab.active .tab-icon {
+    color: var(--color-primary-600);
+}
+
+.showcase-content {
+    background: white;
+    border-radius: 12px;
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Mobile styles */
+@media (max-width: 1024px) {
+    .showcase-grid {
+        grid-template-columns: 200px 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .showcase-sidebar {
+        position: relative;
+        top: 0;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .showcase-tab {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: var(--spacing-md);
+        border-radius: 6px;
+    }
+
+    .tab-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .showcase-content {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .use-cases-showcase {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .showcase-grid {
+        gap: var(--spacing-lg);
+        margin-top: var(--spacing-xl);
+    }
+
+    .showcase-sidebar {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .showcase-tab {
+        padding: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .use-cases-showcase {
+    background-color: var(--color-neutral-900);
+}
+
+[data-theme="dark"] .use-cases-showcase h2 {
+    color: var(--color-neutral-100);
+}
+
+[data-theme="dark"] .section-subtitle {
+    color: var(--color-neutral-400);
+}
+
+[data-theme="dark"] .showcase-tab {
+    border-color: var(--color-neutral-700);
+    color: var(--color-neutral-300);
+}
+
+[data-theme="dark"] .showcase-tab:hover {
+    background: var(--color-neutral-800);
+}
+
+[data-theme="dark"] .showcase-tab.active {
+    background: var(--color-primary-900);
+    border-color: var(--color-primary-700);
+    color: var(--color-primary-300);
+}
+
+[data-theme="dark"] .tab-icon {
+    color: var(--color-neutral-400);
+}
+
+[data-theme="dark"] .showcase-tab.active .tab-icon {
+    color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .showcase-content {
+    background: var(--color-neutral-800);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Add showcase tab content styles */
+.showcase-tab-content {
+    display: none;
+}
+
+.showcase-tab-content.active {
+    display: block;
+}
+
+.showcase-tab-content h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-800);
+    margin-bottom: var(--spacing-md);
+}
+
+.showcase-tab-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-neutral-600);
+    margin-bottom: var(--spacing-lg);
+}
+
+[data-theme="dark"] .showcase-tab-content h3 {
+    color: var(--color-neutral-100);
+}
+
+[data-theme="dark"] .showcase-tab-content p {
+    color: var(--color-neutral-400);
+}
+
+/* Add these styles before the dark mode section */
+
+.use-case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.use-case-card {
+    background-color: var(--color-neutral-50);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    transition: transform var(--transition-base);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.use-case-card:hover {
+    transform: translateY(-4px);
+}
+
+.use-case-card h4 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-800);
+    margin-bottom: var(--spacing-lg);
+}
+
+.metrics {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    color: var(--color-neutral-600);
+    font-weight: var(--font-weight-medium);
+}
+
+.metric-comparison {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-weight: var(--font-weight-semibold);
+}
+
+.before {
+    color: var(--color-neutral-700);
+    text-decoration: line-through;
+}
+
+.arrow {
+    color: var(--color-primary-500);
+}
+
+.after {
+    color: var(--color-primary-600);
+}
+
+/* Dark mode additions */
+[data-theme="dark"] .use-case-card {
+    background-color: var(--color-neutral-800);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .use-case-card h4 {
+    color: var(--color-neutral-100);
+}
+
+[data-theme="dark"] .metric-label {
+    color: var(--color-neutral-400);
+}
+
+[data-theme="dark"] .before {
+    color: var(--color-neutral-500);
+}
+
+[data-theme="dark"] .arrow {
+    color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .after {
+    color: var(--color-primary-300);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .use-case-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .use-case-card {
+        padding: var(--spacing-lg);
+    }
+
+    .use-case-card h4 {
+        font-size: 1.125rem;
+        margin-bottom: var(--spacing-md);
+    }
+} 
