@@ -115,10 +115,6 @@
     background-color: var(--color-neutral-900);
 }
 
-.use-cases {
-    background-color: var(--color-neutral-100);
-}
-
 [data-theme="dark"] .use-cases {
     background-color: var(--color-neutral-900);
 }
