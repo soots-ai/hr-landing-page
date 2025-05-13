@@ -94,6 +94,7 @@
     .showcase-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-xs);
+        
     }
 
     .showcase-sidebar {
