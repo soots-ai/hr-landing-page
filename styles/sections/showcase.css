@@ -46,7 +46,7 @@
     border-radius: 8px;
     background: transparent;
     cursor: pointer;
-    transition: all var(--transition-base);
+    transition: background var(--transition-base);
     width: 98%;
     text-align: left;
     font-weight: var(--font-weight-medium);
@@ -80,6 +80,8 @@
     border-radius: 12px;
     padding: var(--spacing-xl);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
 }
 
 /* Mobile styles */
@@ -212,10 +214,26 @@
 /* Add showcase tab content styles */
 .showcase-tab-content {
     display: none;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .showcase-tab-content.active {
     display: block;
+    position: relative;
+    left: 0;
+    opacity: 1;
+}
+
+.showcase-tab-content.slide-left {
+    left: -100%;
+}
+
+.showcase-tab-content.slide-right {
+    left: 100%;
 }
 
 .showcase-tab-content h3 {

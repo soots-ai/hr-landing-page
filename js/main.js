@@ -76,9 +76,19 @@ processSteps.forEach((step, index) => {
 const showcaseTabs = document.querySelectorAll('.showcase-tab');
 const showcaseContents = document.querySelectorAll('.showcase-tab-content');
 
-showcaseTabs.forEach(tab => {
+let currentTabIndex = 0;
+
+showcaseTabs.forEach((tab, index) => {
+    if (tab.classList.contains('active')) {
+        currentTabIndex = index;
+    }
+    
     tab.addEventListener('click', () => {
         const tabId = tab.getAttribute('data-tab');
+        const newIndex = index;
+        
+        // Determine slide direction
+        const direction = newIndex > currentTabIndex ? 'left' : 'right';
         
         // Remove active class from all tabs
         showcaseTabs.forEach(t => t.classList.remove('active'));
@@ -88,29 +98,35 @@ showcaseTabs.forEach(tab => {
         
         // Handle content transition
         const targetContent = document.querySelector(`.showcase-tab-content[data-tab="${tabId}"]`);
+        const currentContent = document.querySelector('.showcase-tab-content.active');
         
-        // First, start fade out of current active content
-        showcaseContents.forEach(content => {
-            if (content.classList.contains('active')) {
-                content.style.opacity = '0';
-                setTimeout(() => {
-                    content.classList.remove('active');
-                    // Then fade in the new content
-                    targetContent.classList.add('active');
-                    setTimeout(() => {
-                        targetContent.style.opacity = '1';
-                    }, 50);
-                }, 300); // Match this with the CSS transition duration
-            }
-        });
-        
-        // If no active content (first click), show new content immediately
-        if (!document.querySelector('.showcase-tab-content.active')) {
-            targetContent.classList.add('active');
+        if (currentContent) {
+            // Slide current content out
+            currentContent.classList.add(`slide-${direction}`);
+            currentContent.style.opacity = '0';
+            
             setTimeout(() => {
+                currentContent.classList.remove('active');
+                currentContent.classList.remove(`slide-${direction}`);
+                
+                // Prepare new content
+                targetContent.classList.add(`slide-${direction === 'left' ? 'right' : 'left'}`);
+                targetContent.classList.add('active');
+                
+                // Force reflow
+                targetContent.offsetHeight;
+                
+                // Slide new content in
+                targetContent.classList.remove(`slide-${direction === 'left' ? 'right' : 'left'}`);
                 targetContent.style.opacity = '1';
-            }, 50);
+            }, 300);
+        } else {
+            // First load - no animation needed
+            targetContent.classList.add('active');
+            targetContent.style.opacity = '1';
         }
+        
+        currentTabIndex = newIndex;
     });
 });
 
