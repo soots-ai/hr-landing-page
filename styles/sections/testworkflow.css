@@ -1,4 +1,3 @@
-
 /* Workflow Test Section */
 .workflow-test {
     padding: var(--spacing-3xl) 0;
@@ -58,6 +57,16 @@
 
 .select-wrapper {
     position: relative;
+}
+
+.select-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-wrapper select::-ms-expand {
+    display: none;
 }
 
 .select-wrapper::after {
