@@ -78,7 +78,7 @@
 .showcase-content {
     background: white;
     border-radius: 12px;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-md);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     position: relative;
     overflow: hidden;
@@ -102,7 +102,7 @@
     .showcase-sidebar {
         position: relative;
         top: 0;
-        margin-bottom: var(--spacing-lg);
+        margin-bottom: var(--spacing-sm);
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -167,6 +167,15 @@
     .tab-icon {
         width: 20px;
         height: 20px;
+    }
+
+    .showcase-content .use-case-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .showcase-content .use-case-card {
+        width: 100%;
     }
 }
 
