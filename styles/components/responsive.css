@@ -30,6 +30,14 @@
         gap: var(--spacing-lg);
     }
 
+    .metric-comparison {
+        font-size: clamp(0.75rem, 2vw, 1rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+
     .showcase-tab {
         flex: 0 0 auto;
         width: auto;
@@ -117,5 +125,9 @@
 
     .showcase-tab:last-child {
         margin-right: 0;
+    }
+
+    .metric-comparison {
+        font-size: clamp(0.7rem, 1.5vw, 0.875rem);
     }
 } 
