@@ -93,29 +93,49 @@
 @media (max-width: 768px) {
     .showcase-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
+        gap: var(--spacing-xs);
     }
 
     .showcase-sidebar {
         position: relative;
         top: 0;
-        margin-bottom: var(--spacing-xl);
+        margin-bottom: var(--spacing-lg);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+
+    .showcase-sidebar::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
     }
 
     .showcase-tab {
-        flex-direction: row;
-        justify-content: flex-start;
+        flex: 1 1 0;
+        min-width: 90px;
+        max-width: 120px;
+        width: calc(33.33% - var(--spacing-sm));
+        aspect-ratio: 1;
         padding: var(--spacing-md);
-        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 8px;
+        white-space: nowrap;
     }
 
     .tab-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .showcase-content {
-        padding: var(--spacing-lg);
+        width: 24px;
+        height: 24px;
+        margin-bottom: var(--spacing-xs);
     }
 }
 
@@ -131,11 +151,19 @@
 
     .showcase-sidebar {
         margin-bottom: var(--spacing-lg);
+        gap: var(--spacing-xs);
     }
 
     .showcase-tab {
         padding: var(--spacing-sm);
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        min-width: 90px;
+        max-width: 100px;
+    }
+
+    .tab-icon {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -252,9 +280,12 @@
 }
 
 .metric-label {
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
     color: var(--color-neutral-600);
     font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .metric-comparison {

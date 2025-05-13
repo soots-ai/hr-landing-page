@@ -80,13 +80,37 @@ showcaseTabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const tabId = tab.getAttribute('data-tab');
         
-        // Remove active class from all tabs and contents
+        // Remove active class from all tabs
         showcaseTabs.forEach(t => t.classList.remove('active'));
-        showcaseContents.forEach(c => c.classList.remove('active'));
         
-        // Add active class to clicked tab and corresponding content
+        // Add active class to clicked tab
         tab.classList.add('active');
-        document.querySelector(`.showcase-tab-content[data-tab="${tabId}"]`).classList.add('active');
+        
+        // Handle content transition
+        const targetContent = document.querySelector(`.showcase-tab-content[data-tab="${tabId}"]`);
+        
+        // First, start fade out of current active content
+        showcaseContents.forEach(content => {
+            if (content.classList.contains('active')) {
+                content.style.opacity = '0';
+                setTimeout(() => {
+                    content.classList.remove('active');
+                    // Then fade in the new content
+                    targetContent.classList.add('active');
+                    setTimeout(() => {
+                        targetContent.style.opacity = '1';
+                    }, 50);
+                }, 300); // Match this with the CSS transition duration
+            }
+        });
+        
+        // If no active content (first click), show new content immediately
+        if (!document.querySelector('.showcase-tab-content.active')) {
+            targetContent.classList.add('active');
+            setTimeout(() => {
+                targetContent.style.opacity = '1';
+            }, 50);
+        }
     });
 });
 
