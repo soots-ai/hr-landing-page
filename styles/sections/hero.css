@@ -1,4 +1,3 @@
-
 /* Hero Section */
 .hero {
     padding-top: calc(64px + var(--spacing-3xl));
@@ -10,7 +9,6 @@
     gap: var(--spacing-3xl);
     align-items: center;
 }
-
 
 .hero-text {
     max-width: 600px;
@@ -36,6 +34,23 @@
     letter-spacing: var(--letter-spacing-normal);
     margin-bottom: var(--spacing-xl);
     text-align: center;
+}
+
+/* Interview Use Case Image */
+.hero--interview .hero-image--interview {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-base);
+}
+
+.hero--interview .hero-image--interview:hover {
+    transform: translateY(-4px);
+}
+
+[data-theme="dark"] .hero--interview .hero-image--interview {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Image Comparison */
