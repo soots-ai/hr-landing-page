@@ -131,4 +131,83 @@ showcaseTabs.forEach((tab, index) => {
 });
 
 // Start the process steps animation
-activateStep(currentStep); 
+activateStep(currentStep);
+
+// Launch Signup Modal functionality
+const launchButtons = document.querySelectorAll('.button-primary'); // Get all primary buttons
+const modal = document.querySelector('.launch-signup-modal');
+const closeButton = modal.querySelector('.close-button');
+const overlay = modal.querySelector('.modal-overlay');
+const form = document.getElementById('launchSignupForm');
+
+// Function to show modal
+function showModal() {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to hide modal
+function hideModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+// Show modal when clicking any of the launch buttons
+launchButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        showModal();
+    });
+});
+
+// Hide modal when clicking close button or overlay
+closeButton.addEventListener('click', hideModal);
+overlay.addEventListener('click', hideModal);
+
+// Handle form submission
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = form.querySelector('#email').value;
+    const submitButton = form.querySelector('.submit-button');
+    
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
+
+    try {
+        const response = await fetch('https://formspree.io/f/mqaqrgzd', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        });
+
+        if (response.ok) {
+            // Show success message
+            const modalBody = modal.querySelector('.modal-body');
+            modalBody.innerHTML = `
+                <div class="success-message">
+                    <h3>Thank You!</h3>
+                    <br>    
+                    <p>We're excited to have you on board! We'll keep you updated on our progress </p><br>
+                    <button class="submit-button" onclick="hideModal()">Close</button>
+                </div>
+            `;
+        } else {
+            throw new Error('Submission failed');
+        }
+    } catch (error) {
+        console.error('Failed to submit:', error);
+        alert('Failed to submit. Please try again later.');
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "I'm in!";
+    }
+});
+
+// Close modal when pressing Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+        hideModal();
+    }
+}); 

@@ -132,6 +132,28 @@
     .logo {
         justify-content: center;
     }
+
+    /* Mobile Contact Item Styles */
+    .contact-item {
+        position: static;
+    }
+
+    .contact-item .contact-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-item .contact-link::after {
+        content: 'info@soots.ai';
+        font-size: 0.875rem;
+        color: var(--color-neutral-500);
+        font-weight: normal;
+    }
+
+    .email-tooltip {
+        display: none;
+    }
 }
 
 /* Dark mode adjustments */
@@ -238,5 +260,74 @@ input:checked + .slider .sun-icon {
 input:checked + .slider .moon-icon {
     opacity: 1;
     transform: translateX(20px);
+}
+
+/* Contact Email Tooltip */
+.contact-item {
+    position: relative;
+}
+
+.email-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--color-neutral-900);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.email-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-bottom-color: var(--color-neutral-900);
+}
+
+.contact-item:hover .email-tooltip,
+.contact-item:focus-within .email-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(5px);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .email-tooltip {
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-900);
+}
+
+[data-theme="dark"] .email-tooltip::before {
+    border-bottom-color: var(--color-neutral-100);
+}
+
+/* Dark mode adjustments for mobile */
+[data-theme="dark"] .nav-links {
+    background-color: var(--color-neutral-900);
+}
+
+[data-theme="dark"] .nav-links a {
+    color: var(--color-neutral-300);
+    border-bottom-color: var(--color-neutral-700);
+}
+
+[data-theme="dark"] .nav-links a:hover {
+    background-color: var(--color-neutral-700);
+    color: var(--color-primary-400);
+}
+
+[data-theme="dark"] .contact-item .contact-link::after {
+    color: var(--color-neutral-400);
 }
 

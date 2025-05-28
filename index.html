@@ -14,6 +14,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/showcase.css">
+    <link rel="stylesheet" href="styles/components/launch-signup.css">
 </head>
 <body>
     <header class="site-header">
@@ -34,9 +35,12 @@
 
                 <div class="nav-wrapper">
                     <ul class="nav-links">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <!-- <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li> -->
+                        <li class="contact-item">
+                            <a href="#" class="contact-link">Contact</a>
+                            <span class="email-tooltip">info@soots.ai</span>
+                        </li>
                     </ul>
 
                     <div class="theme-toggle">
@@ -72,7 +76,7 @@
                     <div class="hero-text">
                         <h1>HR is about people, not paperwork</h1>
                         <p class="subheadline">Soots automates the tedious work, so you can focus on what you're good at.</p>
-                        <a href="#get-started" class="button button-primary">Try Soots Today</a>
+                        <a href="" class="button button-primary">Join our journey</a>
                     </div>
                     <div class="hero-visual">
                         <div class="image-comparison">
@@ -97,6 +101,40 @@
                 </div>
             </div>
         </section>
+
+        <!-- Launch Signup Modal -->
+        <div class="launch-signup-modal" style="display: none;">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Join Our Journey</h2>
+                    <button class="close-button" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-description">
+                        Be among the first to know when we launch and help shape the future of our product.
+                    </p>
+                    <p class="modal-subtitle">As an early adopter, you'll have the opportunity to:</p>
+                    <ul class="benefits-list">
+                        <li>Influence product features and direction</li>
+                        <li>Get early access to new features</li>
+                        <li>Receive exclusive launch offers</li>
+                    </ul>
+                    <form id="launchSignupForm" class="signup-form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <button type="submit" class="submit-button">I'm in!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <section class="testimonials">
             <div class="container">
@@ -170,7 +208,7 @@
                     </button>
                 </div>
                 <div class="process-cta">
-                    <a href="#get-started" class="button button-primary">Start Automating Today</a>
+                    <a href="" class="button button-primary">Curious? Join our journey!</a>
                 </div>
             </div>
         </section>
@@ -406,7 +444,7 @@
                 </div>
             </div>
         </section>
-        <section class="workflow-test">
+        <!-- <section class="workflow-test">
             <div class="container">
                 <div class="workflow-test-grid">
                     <div class="workflow-test-intro">
@@ -460,7 +498,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <footer class="site-footer">
             <div class="container">
